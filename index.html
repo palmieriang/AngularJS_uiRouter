@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="Demo">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js"></script>
+	<base href="/" />
+</head>
+<body>
+
+<table>
+	<tr>
+		<td colspan="2" class="header">
+			<h1>Website Header</h1>
+		</td>
+	</tr>
+	<tr>
+		<td class="leftMenu">
+			<!-- with ui-sref attribute the value is going to be the name of the state, not the url -->
+			<a ui-sref="home" ui-sref-active="activeState">Home</a>
+			<a ui-sref="courses" ui-sref-active="activeState">Courses</a>
+			<a ui-sref="studentParent.students" ui-sref-active="activeState">Students</a>
+			<a ui-sref="login" ui-sref-active="activeState">Login</a>
+		</td>
+		<td class="mainContent">
+			<ui-view></ui-view>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="footer">
+			<b>Website Footer</b>
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>

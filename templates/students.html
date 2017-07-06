@@ -1,0 +1,13 @@
+<h1>List of Students ({{total}})</h1>
+Name: <input type="text" ng-model="name">
+<button ng-click="searchStudent();">Search</button>
+<ul>
+    <li ng-repeat="student in students">
+    	<!-- sref stands for state reference and now we need to specify the name of the state instead of the url  -->
+        <a ui-sref="studentParent.studentDetails({ID:student.ID})">
+            {{student.name}}
+        </a>
+    </li>
+</ul>
+
+<button ng-click="reloadData();">Reload Data</button>
